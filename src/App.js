@@ -6,32 +6,53 @@ import SideBar from "./components/SideBar";
 const patientUrl = "https://619f39821ac52a0017ba467e.mockapi.io/patientDetails";
 const appoimentUrl =
   "https://619f39821ac52a0017ba467e.mockapi.io/appointment_details";
+const doctorurl = "https://619f39821ac52a0017ba467e.mockapi.io/DoctorDetails";
 function App() {
+  const [sidebar, setsidebar] = useState(true);
   const [patientdata, setpatientdata] = useState([]);
   const [appoimentdata, setappoimentdata] = useState([]);
+  const [doctordata, setdoctordata] = useState([]);
 
+  const handleSidebar = () => {
+    setsidebar(!sidebar);
+  };
   useEffect(() => {
     patientData();
     appoimentsData();
+    doctorData();
   }, []);
 
   const patientData = async function () {
-    const data = await fetch(patientUrl);
-    const parseData = await data.json();
-    console.log(parseData);
-    setpatientdata(parseData);
+    try {
+      const data = await fetch(patientUrl);
+      const parseData = await data.json();
+      console.log(parseData);
+      setpatientdata(parseData);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const appoimentsData = async () => {
-    const data = await fetch(appoimentUrl);
-    const parseData = await data.json();
-    console.log(parseData);
-    setappoimentdata(parseData);
+    try {
+      const data = await fetch(appoimentUrl);
+      const parseData = await data.json();
+      console.log(parseData);
+      setappoimentdata(parseData);
+    } catch (error) {
+      console.log(error);
+    }
   };
-
-  const [sidebar, setsidebar] = useState(true);
-  const handleSidebar = () => {
-    setsidebar(!sidebar);
+  const doctorData = async () => {
+    try {
+      const data = await fetch(doctorurl);
+      const parseData = await data.json();
+      console.log(parseData);
+      setdoctordata(parseData);
+      console.log("here is the ", parseData);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -42,7 +63,7 @@ function App() {
         onClick={handleSidebar}
       ></i>
 
-      {sidebar ? <SideBar /> : null}
+      {sidebar ? <SideBar doctorData={doctordata} /> : null}
 
       <Main data={patientdata} appoimentdata={appoimentdata} />
     </div>
