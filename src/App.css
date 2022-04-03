@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+.main-component {
+  width: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hamburger {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: larger;
+  z-index: 999;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.patient-info {
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  border-radius: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.patient-detail {
+  width: 550px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.patient-notes {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.appoiments {
+  width: 800px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: white;
+}
+.file {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: white;
 }
