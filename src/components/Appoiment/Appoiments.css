@@ -1,42 +1,54 @@
 .appoiments {
   width: 800px;
   height: 350px;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: white;
   overflow-y: scroll;
 }
 .single-Appoiment {
+  border-radius: 5px;
   margin-left: 40px;
   margin-bottom: 40px;
   width: 700px;
   height: 100px;
-  background-color: aqua;
+  background-color: white;
 }
 .upcoming-button,
 .past-button,
 .medical-button {
   padding: 0px 20px;
   border-radius: 5px;
-  border-color: 2px solid grey;
+  /* border-color: 2px solid grey; */
+  border: none;
   background-color: lightgray;
+  font-weight: 900;
 
   /* border: none; */
 }
 .header_buttons {
-  background-color: grey;
-  padding: 5px 10px;
+  /* background-color: grey; */
+  /* padding: 5px 10px; */
   border: 5px;
 }
 
 .upcoming-button:hover {
   background-color: white;
+  color: rgb(47, 47, 193);
 }
 .past-button:hover {
   background-color: white;
+  color: rgb(47, 47, 193);
 }
 .medical-button:hover {
   background-color: white;
+  color: rgb(47, 47, 193);
 }
 .appoiments {
   height: 350px;
+}
+.show-appoiments {
+  padding-top: 40px;
+  background-color: lightgray;
+  padding-bottom: 40px;
+  border-radius: 4px;
 }

@@ -23,7 +23,9 @@ const Files = (props) => {
             <i class="fa-solid fa-file-lines fa-lg px-2"></i>
             <small>Check up Result pdf</small>
           </div>
-          <div>delete</div>
+          <div className="me-3 delete">
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
         </div>
         <div
           className="single-file d-flex justify-content-between  align-items-center my-3"
@@ -33,7 +35,9 @@ const Files = (props) => {
             <i class="fa-solid fa-file-lines fa-lg px-2"></i>
             <small>Dental X-ray Results pdf</small>
           </div>
-          <div>delete</div>
+          <div className="me-3 delete">
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
         </div>
         <div
           className="single-file d-flex justify-content-between my-3 align-items-center "
@@ -43,7 +47,9 @@ const Files = (props) => {
             <i class="fa-solid fa-file-lines fa-lg px-2"></i>
             <small>Medical prescription.pdf</small>
           </div>
-          <div>delete</div>
+          <div className="me-3 delete">
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
         </div>
         <div
           className="single-file d-flex justify-content-between my-3 align-items-center "
@@ -53,7 +59,9 @@ const Files = (props) => {
             <i class="fa-solid fa-file-lines fa-lg px-2"></i>
             <small>Dental x-ray Result. pdf</small>
           </div>
-          <div>delete</div>
+          <div className="me-3 delete">
+            <i class="fa-regular fa-trash-can"></i>
+          </div>
         </div>
       </div>
     </div>

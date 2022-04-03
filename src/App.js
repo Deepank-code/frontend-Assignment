@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import Main from "./components/Main";
-
+import { Message } from "./components/Message";
+import Payment from "./components/Payment";
 import SideBar from "./components/SideBar";
+import Overview from "./components/Overview";
+import Calender from "./components/Calender";
 const patientUrl = "https://619f39821ac52a0017ba467e.mockapi.io/patientDetails";
 const appoimentUrl =
   "https://619f39821ac52a0017ba467e.mockapi.io/appointment_details";
@@ -64,8 +68,16 @@ function App() {
       ></i>
 
       {sidebar ? <SideBar doctorData={doctordata} /> : null}
-
-      <Main data={patientdata} appoimentdata={appoimentdata} />
+      <Routes>
+        <Route
+          path="/"
+          element={<Main data={patientdata} appoimentdata={appoimentdata} />}
+        />
+        <Route path="/overview" element={<Overview />} />
+        <Route path="/calender" element={<Calender />} />
+        <Route path="/message" element={<Message />} />
+        <Route path="/payment" element={<Payment />} />
+      </Routes>
     </div>
   );
 }

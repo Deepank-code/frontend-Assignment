@@ -1,6 +1,9 @@
 #notesection {
   height: 230px;
   width: 300px;
-  background-color: grey;
+  background-color: lightgrey;
   border-radius: 5px;
+}
+.notes-bottom {
+  margin-bottom: 0rem !important;
 }

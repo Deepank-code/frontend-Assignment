@@ -13,6 +13,11 @@ const Main = (props) => {
   return (
     <div className="main-component">
       <Navbar />
+      <header>
+        <h5 className="fw-bolder ms-5 my-3" style={{ color: "#0d6efd" }}>
+          Patient List<span style={{ color: "black" }}> &gt; Daine Cooper</span>
+        </h5>
+      </header>
       <div class="container">
         {props.data[0] ? (
           <>
@@ -34,15 +39,16 @@ const Main = (props) => {
                   </div>
                   <div className="mx-3">
                     <h3 className="fw-bolder">{props.data[0].Upcoming}</h3>
-                    <small>Upcoming</small>
+                    <small className="fw-bolder">Upcoming</small>
                   </div>
                 </div>
                 <button
                   style={{
                     border: "2px solid grey",
-                    padding: "0px 20px",
-                    borderRadius: "10px",
+                    padding: "0px 40px",
+                    borderRadius: "5px",
                     marginTop: "10px",
+                    backgroundColor: "white",
                   }}
                 >
                   Send message

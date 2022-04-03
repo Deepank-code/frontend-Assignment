@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Sidebar.css";
 const SideBar = (props) => {
   console.log(props.doctorData[0]);
@@ -25,34 +26,34 @@ const SideBar = (props) => {
 
         <ul className="nav nav-pills flex-column mb-auto">
           <li className="nav-item">
-            <a href="#" className="nav-link active" aria-current="page">
+            <Link to="overview" className="nav-link " aria-current="page">
               <svg className="bi me-2" width="16" height="16"></svg>
               Overview
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="nav-link link-dark">
+            <Link to="calender" className="nav-link link-dark">
               <svg className="bi me-2" width="16" height="16"></svg>
               Calender
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="nav-link link-dark">
+            <Link to="/" className="nav-link active link-dark">
               <svg className="bi me-2" width="16" height="16"></svg>
               Patient List
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="nav-link link-dark">
+            <Link to="message" className="nav-link link-dark">
               <svg className="bi me-2" width="16" height="16"></svg>
               Messages
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="nav-link link-dark">
+            <Link to="payment" className="nav-link link-dark">
               <svg className="bi me-2" width="16" height="16"></svg>
               Payment information
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#" className="nav-link link-dark">
